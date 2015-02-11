@@ -32,9 +32,16 @@
           </div>
         </a>
 
-        <%= link_to restaurant.name + ' menu', restaurant_items_path(restaurant) %>      
+        <%= link_to restaurant.name + ' menu', restaurant_items_path(restaurant) %>    
+
+
+
         
       </div>
     </section>
   <% end %>
 </div>
+<% if current_user.is_admin? %>
+        
+          <button type="button">Stop</button> 
+        <% end %>
