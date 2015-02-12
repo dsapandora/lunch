@@ -29,19 +29,28 @@
         <a href="#" onclick="showUsers(<%= restaurant.id %>)">
           <div class="vote-count col-xs-6" id="vote_<%= restaurant.id %>">
             Votes: <%= restaurant.users.count %>
+                
+            
           </div>
         </a>
 
-        <%= link_to restaurant.name + ' menu', restaurant_items_path(restaurant) %>    
+         
+<%= link_to restaurant.name + ' menu', restaurant_items_path(restaurant) %>
 
+ <% cant= restaurant.users.count %>
+                   <% canti=1 %>
 
-
+                    <% if (cant > canti ) %>
+                    <% canti = cant %>
+                    <br>
+                    </br>
+            
+          </div>
+           
+                <b><h5>&nbsp; &nbsp; Current Winner: <%= link_to restaurant.name + ' menu', restaurant_items_path(restaurant) %></h5></b>
+             <%end %>
         
       </div>
     </section>
   <% end %>
 </div>
-<% if current_user.is_admin? %>
-        
-          <button type="button">Stop</button> 
-        <% end %>
