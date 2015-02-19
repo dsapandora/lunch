@@ -1,6 +1,8 @@
 <div class="row">
+  <%maxii = 0 %>
   <% @restaurants.each do |restaurant| %>
     <section class="col-xs-3">
+      <br><%= restaurant.name  %></br>
       <%= card_image_div(restaurant, current_user) %>
       
         <div id="users_<%= restaurant.id %>" class="show-users"></div>
@@ -9,7 +11,6 @@
 
       <div class="row">
         <div class="manage-restaurant col-xs-6">
-          
           <% if current_user.is_admin? %>
             <%= link_to edit_restaurant_path(restaurant) do %>
             <button type="button">Edit              
@@ -28,6 +29,7 @@
         </div>
         <a href="#" onclick="showUsers(<%= restaurant.id %>)">
           <div class="vote-count col-xs-6" id="vote_<%= restaurant.id %>">
+<<<<<<< HEAD
             Votes: <%= restaurant.users.count %>
                 
             
@@ -49,8 +51,30 @@
            
                 <b><h5>&nbsp; &nbsp; Current Winner: <%= link_to restaurant.name + ' menu', restaurant_items_path(restaurant) %></h5></b>
              <%end %>
+=======
+            TheVotes: <%= restaurant.users.count %>
+            <%maxi = restaurant.users.count %>
+            <% if maxi > maxii %>
+               <%maxii = maxi %>
+               <br>Current Winner: </br> 
+               <%= link_to restaurant.name + ' menu', restaurant_items_path(restaurant) %>
+
+            <% end %>
+
+
+          </div>
+        </a>
+
+    
+>>>>>>> 24086dcfe297726979c3ad3dcd1ae6b8c0093430
         
       </div>
+    
+
+
     </section>
+   
+
   <% end %>
+
 </div>

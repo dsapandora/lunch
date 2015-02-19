@@ -3,18 +3,30 @@ development:
   encoding: utf8
   database: lunch_development
   username: root
+<<<<<<< HEAD
   password: esperoel2013
   
+=======
+
+>>>>>>> 24086dcfe297726979c3ad3dcd1ae6b8c0093430
 test:
   adapter: mysql2
   encoding: utf8
   database: lunch_test
   username: travis
+<<<<<<< HEAD
   password: esperoel2013
 
+=======
+ 
+>>>>>>> 24086dcfe297726979c3ad3dcd1ae6b8c0093430
 production:
   adapter: mysql2
   encoding: utf8
   database: lunch
   username: root
+<<<<<<< HEAD
   password: esperoel2013
+=======
+
+>>>>>>> 24086dcfe297726979c3ad3dcd1ae6b8c0093430
